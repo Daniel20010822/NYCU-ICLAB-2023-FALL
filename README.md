@@ -1,0 +1,17 @@
+# Labs
+ - Lab01: SMC 
+ - Lab02: CC 
+ - Lab03: BRIDGE
+ - Lab04: SNN
+ - Lab05: CAD
+ - Lab06: HT_TOP/SORT_IP
+ - Lab07: FIFO/Handshake
+ - Lab08: SNN (clock gate ver. of Lab04)
+ - Lab09: BEV
+ - Lab10: CHECKER
+ - Lab11: Bonus (Quick_Test)
+ - Lab12: CHIP (APR of Lab05)
+ - Lab13: CHIP (Rail Analysis/IR-drop Analysis)
+ - Midterm_project: MRA
+ - Final_project: CPU
+ - OT: TRAIN
