@@ -16,13 +16,13 @@
 module HT_TOP(
     // Input signals
     clk,
-	rst_n,
-	in_valid,
+    rst_n,
+    in_valid,
     in_weight,
-	out_mode,
+    out_mode,
     // Output signals
     out_valid,
-	out_code
+    out_code
 );
 
 //================================================================

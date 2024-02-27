@@ -19,9 +19,9 @@
 
 // synopsys translate_off
 `ifdef RTL
-	`include "GATED_OR.v"
+    `include "GATED_OR.v"
 `else
-	`include "Netlist/GATED_OR_SYN.v"
+    `include "Netlist/GATED_OR_SYN.v"
 `endif
 // synopsys translate_on
 
@@ -34,7 +34,7 @@ module SNN(
     in_valid,
     Img,
     Kernel,
-	Weight,
+    Weight,
     Opt,
 
     //Output Port

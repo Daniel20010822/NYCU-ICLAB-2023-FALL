@@ -2,12 +2,12 @@ module Train(
     //Input Port
     clk,
     rst_n,
-	in_valid,
-	data,
+    in_valid,
+    data,
 
     //Output Port
     out_valid,
-	result
+    result
 );
 
 input        clk;

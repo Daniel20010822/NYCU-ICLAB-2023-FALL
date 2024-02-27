@@ -19,19 +19,19 @@ package usertype;
 
 typedef enum logic  [1:0] { Make_drink	        = 2'h0,
                             Supply	            = 2'h1,
-							Check_Valid_Date    = 2'h2
-							}  Action ;
+                            Check_Valid_Date    = 2'h2
+                            }  Action ;
 
 typedef enum logic  [1:0] { No_Err       		= 2'b00, // No error
                             No_Exp              = 2'b01, // Pass the Expiration Date
-							No_Ing              = 2'b10, // Ingredient not enough
-						    Ing_OF	            = 2'b11  // Ingredient Overflow
+                            No_Ing              = 2'b10, // Ingredient not enough
+                            Ing_OF	            = 2'b11  // Ingredient Overflow
                             }  Error_Msg ;
 
 typedef enum logic  [2:0] { Black_Tea      	         = 3'h0,
-							Milk_Tea	             = 3'h1,
-							Extra_Milk_Tea           = 3'h2,
-							Green_Tea 	             = 3'h3,
+                            Milk_Tea	             = 3'h1,
+                            Extra_Milk_Tea           = 3'h2,
+                            Green_Tea 	             = 3'h3,
                             Green_Milk_Tea           = 3'h4,
                             Pineapple_Juice          = 3'h5,
                             Super_Pineapple_Tea      = 3'h6,
@@ -39,8 +39,8 @@ typedef enum logic  [2:0] { Black_Tea      	         = 3'h0,
                             }  Bev_Type ;  // Beverage Type
 
 typedef enum logic  [1:0]	{ L  = 2'b00,
-							  M  = 2'b01,
-							  S  = 2'b11
+                              M  = 2'b01,
+                              S  = 2'b11
                             } Bev_Size ;
 
 typedef logic [11:0] ING;
@@ -63,7 +63,7 @@ typedef struct packed {
 } Bev_Bal; // Ingredient Barrel
 
 typedef struct packed {
-	Bev_Type Bev_Type_O;
+    Bev_Type Bev_Type_O;
     Bev_Size Bev_Size_O;
 } Order_Info; // Order info
 

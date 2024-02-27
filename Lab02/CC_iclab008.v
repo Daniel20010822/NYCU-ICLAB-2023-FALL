@@ -6,15 +6,15 @@ module CC(
     //Input Port
     clk,
     rst_n,
-	in_valid,
-	mode,
+    in_valid,
+    mode,
     xi,
     yi,
 
     //Output Port
     out_valid,
-	xo,
-	yo
+    xo,
+    yo
     );
 
 input               clk, rst_n, in_valid;

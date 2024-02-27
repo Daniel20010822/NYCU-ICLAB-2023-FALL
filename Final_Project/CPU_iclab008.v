@@ -18,10 +18,10 @@
 
 module CPU(
 
-				clk,
-			  rst_n,
+                clk,
+              rst_n,
 
-		   IO_stall,
+           IO_stall,
 
          awid_m_inf,
        awaddr_m_inf,
@@ -355,10 +355,10 @@ always @(posedge clk or negedge rst_n) begin
     if (!rst_n) cs_inst <= S_INST_IDLE;
     else        cs_inst <= ns_inst;
 end
-always @(*) begin 
+always @(*) begin
     case (cs_inst)
         S_INST_IDLE: begin
-            if (inst_in_valid) begin 
+            if (inst_in_valid) begin
                 if (inst_tag_valid && inst_tag == pc[11:8])
                     ns_inst = S_INST_HIT;
                 else
@@ -543,14 +543,14 @@ end
 always @(*) begin
     case (cs_data)
         S_DATA_IDLE: begin
-            if (data_in_valid) begin 
+            if (data_in_valid) begin
                 if (write_valid && data_tag == DM_addr[11:8])
                     ns_data = S_DATA_STORE;
                 else if (data_tag_valid && data_tag == DM_addr[11:8])
                     ns_data = S_DATA_HIT;
                 else if (!write_valid)
                     ns_data = S_DATA_ADDR;
-                else 
+                else
                     ns_data = S_DATA_IDLE;
             end
             else ns_data = S_DATA_IDLE;

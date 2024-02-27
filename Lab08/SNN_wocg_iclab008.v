@@ -50,7 +50,7 @@ module SNN(
     in_valid,
     Img,
     Kernel,
-	Weight,
+    Weight,
     Opt,
 
     //Output Port

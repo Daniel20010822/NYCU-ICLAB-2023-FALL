@@ -21,7 +21,7 @@ module PATTERN(
     out_data,
     // DRAM Signals
     AR_VALID, AR_ADDR, R_READY, AW_VALID, AW_ADDR, W_VALID, W_DATA, B_READY,
-	AR_READY, R_VALID, R_RESP, R_DATA, AW_READY, W_READY, B_VALID, B_RESP,
+    AR_READY, R_VALID, R_RESP, R_DATA, AW_READY, W_READY, B_VALID, B_RESP,
     // SD Signals
     MISO,
     MOSI
@@ -128,7 +128,7 @@ task reset_signal_task; begin
         SPEC_MAIN_1_DEBUG_task;
         SPEC_MAIN_1_FAIL_task;
     end
-	#CYCLE; release clk;
+    #CYCLE; release clk;
 end endtask
 
 task input_task; begin
@@ -159,7 +159,7 @@ task wait_out_valid_task; begin
     /* out_data  should be 0              */
     /**************************************/
     while (out_valid !== 1'b1) begin
-	    latency = latency + 1;
+        latency = latency + 1;
 
         // Read data to check SPEC_MAIN_5
         if (~dir && R_VALID)

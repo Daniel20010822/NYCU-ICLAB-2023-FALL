@@ -79,9 +79,9 @@ Bev_Bal received_bal, updated_bal;
 
 Error_Msg err_msg_r;
 logic Ingredient_Overflow, Expired, No_Ingredient;
-logic [12:0] updated_black_tea;      
-logic [12:0] updated_green_tea;      
-logic [12:0] updated_milk;           
+logic [12:0] updated_black_tea;
+logic [12:0] updated_green_tea;
+logic [12:0] updated_milk;
 logic [12:0] updated_pineapple_juice;
 
 //=================================
@@ -389,8 +389,8 @@ always_comb begin : OVERFLOW_CHECK
             updated_pineapple_juice = received_bal.pineapple_juice  - pj_cost ;
         end
         SUPPLY: begin
-            updated_black_tea       = bt_r  + received_bal.black_tea; 
-            updated_green_tea       = gt_r  + received_bal.green_tea; 
+            updated_black_tea       = bt_r  + received_bal.black_tea;
+            updated_green_tea       = gt_r  + received_bal.green_tea;
             updated_milk            = mlk_r + received_bal.milk;
             updated_pineapple_juice = pj_r  + received_bal.pineapple_juice;
         end

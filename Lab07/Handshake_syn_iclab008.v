@@ -77,11 +77,11 @@ always @(posedge sclk or negedge rst_n) begin
 end
 always @(*) begin
     case(src_cs)
-        SRC_IDLE:           
+        SRC_IDLE:
             src_ns = (sready) ? SRC_WAIT_SACK : SRC_IDLE;
-        SRC_WAIT_SACK:      
+        SRC_WAIT_SACK:
             src_ns = (sack)   ? SRC_WAIT_SACK_LOW : SRC_WAIT_SACK;
-        SRC_WAIT_SACK_LOW:  
+        SRC_WAIT_SACK_LOW:
             src_ns = (~sack)  ? SRC_IDLE : SRC_WAIT_SACK_LOW;
         default: src_ns = src_cs;
     endcase
@@ -92,7 +92,7 @@ always @(posedge sclk or negedge rst_n) begin
     else begin
        if (sready && src_cs == SRC_IDLE)         sreq <= 'd1;
        else if (sack && src_cs == SRC_WAIT_SACK) sreq <= 'd0;
-    end       
+    end
 end
 
 
@@ -133,12 +133,12 @@ end
 always @(posedge dclk or negedge rst_n) begin
     if (!rst_n)  dack <= 'd0;
     else begin
-        if (dreq && !dbusy && dst_cs == DST_IDLE)  
+        if (dreq && !dbusy && dst_cs == DST_IDLE)
             dack <= (dreq);
         else if (~dreq && dst_cs == DST_DACK_HIGH)
             dack <= (dreq);
-        
-    end        
+
+    end
 end
 
 always @(posedge dclk or negedge rst_n) begin

@@ -197,7 +197,7 @@ always @(*) fifo_rinc = ~fifo_empty;
 //         out_temp  <= 'b0;
 //         out_valid <= 'b0;
 //     end
-//     else begin       
+//     else begin
 //         out_temp  <= fifo_rinc;
 //         out_valid <= out_temp;
 //     end
@@ -207,7 +207,7 @@ always @(posedge clk or negedge rst_n) begin
         out_temp  <= 'b0;
         out_valid_r <= 'b0;
     end
-    else begin       
+    else begin
         out_temp  <= fifo_rinc;
         out_valid_r <= out_temp;
     end
